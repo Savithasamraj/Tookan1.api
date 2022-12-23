@@ -7,9 +7,9 @@ const  datas= async(req,res)=>{
     try{
  const  jobdetails= await data.create(req.body)
  res.status(200).send({message:"profile created"})
-    let data = "This is a file containing a collection of books.";
+    
           
-    fs.writeFile("books.txt", data, (err) => {
+    fs.writeFile("books.txt","savi", (err) => {
       if (err)
         console.log(err);
       else {
