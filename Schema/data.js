@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const data=new mongoose.Schema({
    
     job_latitude:{type:String,required: true},
-    fleet_email:{type:String,},
-    is_routed:{type:String,},
-    job_type:{type:String,},
-    team_id:{type:String,},
+    fleet_email:{type:String,required: true},
+    is_routed:{type:String,required: true},
+    job_type:{type:String,required: true},
+    team_id:{type:String,required: true},
     auto_assignment:{type:String,},
     job_description:{type:String,},
     timezone:{type:String,},

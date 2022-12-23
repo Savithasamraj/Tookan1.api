@@ -1,40 +1,40 @@
-const fs = require('fs');
+const fs = require("fs");
+const dataerror=require("../Schema/error")
+const data = require("../Schema/data");
 
-const data =require("../Schema/data")
-
-const  datas= async(req,res)=>{
-    
-    try{
- const  jobdetails= await data.create(req.body)
- res.status(200).send({message:"profile created"})
-    
-          
-    fs.writeFile("books.txt","savi", (err) => {
-      if (err)
-        console.log(err);
-      else {
-        console.log("File written successfully\n");
-        console.log("The written has the following contents:");
-        
-      }
-    });
-
-    }
-    catch(error){
-        console.log(error)
-
-
-        fs.writeFile("books.txt",error, (err) => {
-            if (err)
-              console.log(err);
-            else {
-              console.log("File written successfully\n");
-              console.log("The written has the following contents:");
-              
-            }
-          });  
+const datas = async (req, res) => {
+  try {
+    const jobdetails = await data.create(req.body);
+    res.status(200).send({ message: "profile created" });
+  } 
   
-      
-    }
-}
-module.exports={datas}
+  
+  
+  catch (error) {
+    const data = JSON.stringify(error);
+    fs.writeFile("error"+Math.floor(Math.random(0,100))+".txt", data, (err) => {
+        if (err) console.log(err);
+        else {
+          console.log("File written successfully\n");
+          
+        }
+      });
+  }
+    
+//     const data = JSON.stringify(error);
+//     console.log( "start" +error+"end")
+// req.body=error
+
+    // fs.writeFile("errors.txt", data, (err) => {
+    //   if (err) console.log(err);
+    //   else {
+    //     console.log("File written successfully\n");
+        
+    //   }
+    // });
+
+//   const errors = await dataerror.create(data);
+//   res.status(200).send({ message: "error added" });
+  }
+// };
+module.exports = { datas};
