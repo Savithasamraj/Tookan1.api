@@ -12,7 +12,10 @@ const  datas= async(req,res)=>{
     catch(error){
         console.log(error)
 var data=error
-fs.writeFile('error.txt',data )
+fs.writeFile('error.txt',data ,function (err) {
+    if (err) return console.log(err);
+    console.log('Hello World > helloworld.txt');
+  })
 
     }
 }
