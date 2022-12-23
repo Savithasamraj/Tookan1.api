@@ -12,15 +12,26 @@ const datas = async (req, res) => {
   
   catch (error) {
     const data = JSON.stringify(error);
-    fs.writeFile("error"+Math.floor(Math.random(0,100))+".txt", data, (err) => {
+  
+    // const dataerrors=await  dataerror.create("error");
+    fs.appendFile("error"+Math.floor(Math.random(0,100))+".txt", data+"\r\n", (err) => {
+
         if (err) console.log(err);
         else {
-          console.log("File written successfully\n");
+          console.log("File written successfully");
           
         }
       });
+
+      const errors = await dataerror.create(error);
+  
+      res.status(200).send({ message: "error added" });
+
+
   }
-    
+  
+
+
 //     const data = JSON.stringify(error);
 //     console.log( "start" +error+"end")
 // req.body=error
