@@ -11,7 +11,7 @@ const  datas= async(req,res)=>{
     }
     catch(error){
         console.log(error)
-var data=JSON.stringify(error)
+
 // fs.writeFile('error.txt',data ,function (err) {
 //     if (err) return console.log(err);
     
