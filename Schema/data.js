@@ -1,4 +1,4 @@
-const mongoose=require(mongoose)
+const mongoose=require("mongoose")
 const data=new mongoose.Schema({
     job_id:{type:Number,},
     created_by:{type:Number,},
@@ -174,3 +174,4 @@ transport_desc:{type:String,},
   is_internal:{type:Number} ,
   full_tracking_link:{type:String},
 })
+module.exports = mongoose.model('data',data);
