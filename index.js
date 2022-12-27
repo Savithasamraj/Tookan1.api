@@ -16,9 +16,7 @@ then(()=>console.log("connection successfull"))
 mongoose.set('strictQuery', true);
 app.use("/Tookan.api", routes)
 app.use("/Tookan.api", routes1)
-// app.get('/', function (req, res) {
-//     res.send('GET request to homepage')
-//   })
+
 app.listen(5000,"127.0.0.1",()=>{
     console.log("server running")
 })
