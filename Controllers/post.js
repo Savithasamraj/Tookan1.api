@@ -7,6 +7,7 @@ const datas = async (req, res) => {
     
 
 const details=whatsappdetails.getdetails(req.body)
+res.status(200).send({ message: "profile created" });
 // const jobdetails = await data.create(req.body);
 //     res.status(200).send({ message: "profile created" });
 
