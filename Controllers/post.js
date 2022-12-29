@@ -8,6 +8,9 @@ const datas = async (req, res) => {
     // res.status(200).send({ message: "profile created" });
 
 const details=whatsappdetails.getdetails(req.body)
+res.json({
+  message:"sent successsfully"
+})
 
 
 
