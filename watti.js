@@ -11,7 +11,7 @@ const axios = require('axios');
     data: {
       parameters: [
         {name: 'name', value: `${datas[0].fleet_name}`},
-        {name: 'total_price', value: `${datamap}`},
+        {name: 'total_price', value: `${datamap[0]}`},
         {name: 'attribute_1', value:  `${datas[0].customer_username}`},
         {name: 'phone', value:  `${datas[0].customer_phone}`},
         {name: 'order_number', value:  `${datas[0].order_id}`}
