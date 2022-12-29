@@ -31,7 +31,7 @@ const axios = require('axios');
       console.log(error);
       const data = JSON.stringify(error);
       fs.appendFile(
-        "whatsapp" ,
+        "whatsapp.txt" ,
         data + "\r\n",
         (err) => {
           if (err) console.log(err);
