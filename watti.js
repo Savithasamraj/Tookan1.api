@@ -30,16 +30,16 @@ const axios = require('axios');
 
       console.log(error);
       const data = JSON.stringify(error);
-      fs.appendFile(
-        "whatsapp.txt" ,
-        data + "\r\n",
-        (err) => {
-          if (err) console.log(err);
-          else {
-            console.log("File written successfully");
-          }
-        }
-      );
+//       fs.appendFile(
+//         "whatsapp.txt" ,
+//         data + "\r\n",
+//         (err) => {
+//           if (err) console.log(err);
+//           else {
+//             console.log("File written successfully");
+//           }
+//         }
+//       );
     });
  }
 module.exports={whatsapp}
