@@ -4,8 +4,8 @@ const data = require("../Schema/data");
 const whatsappdetails=require("../Controllers/read")
 const datas = async (req, res) => {
   try {
-    const jobdetails = await data.create(req.body);
-    res.status(200).send({ message: "profile created" });
+    // const jobdetails = await data.create(req.body);
+    // res.status(200).send({ message: "profile created" });
 
 const details=whatsappdetails.getdetails(req.body)
 
