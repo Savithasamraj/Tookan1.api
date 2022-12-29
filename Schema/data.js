@@ -173,5 +173,6 @@ transport_desc:{type:String,},
   template_key:{type:String} ,
   is_internal:{type:Number} ,
   full_tracking_link:{type:String},
+  isSent:{type:Boolean,default:true}
 })
 module.exports = mongoose.model('data',data);
