@@ -1,6 +1,6 @@
 const axios = require('axios');
  const whatsapp=(req)=>{
-  
+  const fs = require("fs");
   const options = {
     method: 'POST',
     url: 'https://live-server-100817.wati.io/api/v1/sendTemplateMessage?whatsappNumber=916379146848',
